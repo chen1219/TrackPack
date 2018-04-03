@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TrackPack</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_jelly_toggle_button">JellyToggleButton</string>
+    <string name="title_activity_connection__toggle">Connection_Toggle</string>
+</resources>
