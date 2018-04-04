@@ -14,13 +14,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu_bar);
+        setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
     }
 
     @Override
@@ -85,17 +87,17 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_my_schedule) {
             fragmentManager.beginTransaction()
                     .replace(R.id.content_frame
-                            , new FirstFragment())
+                            , new MySchedule())
                     .commit();
         } else if (id == R.id.nav_connections) {
             fragmentManager.beginTransaction()
                     .replace(R.id.content_frame
-                            , new SecondFragment())
+                            , new Connections())
                     .commit();
         } else if (id == R.id.nav_tags) {
             fragmentManager.beginTransaction()
                     .replace(R.id.content_frame
-                            , new ThirdFragment())
+                            , new Tags())
                     .commit();
         } else if (id == R.id.nav_share) {
 
@@ -109,3 +111,5 @@ public class MainActivity extends AppCompatActivity
     }
 
 }
+
+

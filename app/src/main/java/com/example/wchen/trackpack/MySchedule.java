@@ -11,7 +11,7 @@ import android.view.ViewGroup;
  * Created by wchen on 2/20/18.
  */
 
-public class FirstFragment extends Fragment{
+public class MySchedule extends Fragment{
 
     View myView;
 
