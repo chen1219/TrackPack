@@ -29,8 +29,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/btnFindUnpairedDevices"
         android:text="Discover"
-        android:onClick="btnDiscover"
-        tools:ignore="OnClick" />
+        android:onClick="btnDiscover" />
+        <!--tools:ignore="OnClick" />-->
 
     <ListView
         android:layout_marginTop="15dp"
