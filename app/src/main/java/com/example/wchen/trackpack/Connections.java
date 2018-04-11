@@ -55,7 +55,7 @@ public class Connections extends Fragment {
         BluetoothConnectionService mBluetoothConnection;
 
         Button btnStartConnection;
-        Button btnSend;
+        //Button btnSend;
 
         EditText etSend;
 
@@ -212,7 +212,7 @@ public class Connections extends Fragment {
             mBTDevices = new ArrayList<>();
 
             btnStartConnection = (Button) findViewById(R.id.btnStartConnection);
-            btnSend = (Button) findViewById(R.id.btnSend);
+            //btnSend = (Button) findViewById(R.id.btnSend);
             etSend = (EditText) findViewById(R.id.editText);
 
             //Broadcasts when bond state changes (ie:pairing)
@@ -239,13 +239,13 @@ public class Connections extends Fragment {
                 }
             });
 
-            btnSend.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    byte[] bytes = etSend.getText().toString().getBytes(Charset.defaultCharset());
-                    mBluetoothConnection.write(bytes);
-                }
-            });
+//            btnSend.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    byte[] bytes = etSend.getText().toString().getBytes(Charset.defaultCharset());
+//                    mBluetoothConnection.write(bytes);
+//                }
+//            });
         }
 
         //create method for starting connection
@@ -285,20 +285,6 @@ public class Connections extends Fragment {
             }
 
         }
-
-
-//        public void btnEnableDisable_Discoverable(View view) {
-//            Log.d(TAG, "btnEnableDisable_Discoverable: Making device discoverable for 300 seconds.");
-//
-//            Intent discoverableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
-//            discoverableIntent.putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 300);
-//            startActivity(discoverableIntent);
-//
-//            IntentFilter intentFilter = new IntentFilter(mBluetoothAdapter.ACTION_SCAN_MODE_CHANGED);
-//            registerReceiver(mBroadcastReceiver2, intentFilter);
-//
-//
-//        }
 
         @RequiresApi(api = Build.VERSION_CODES.M)
         public void btnDiscover(View view) {
